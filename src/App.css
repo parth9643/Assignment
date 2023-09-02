@@ -1,6 +1,4 @@
-/* App.css */
 
-/* Global styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,18 +6,17 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Header styles */
 .App-header {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px 0;
-  font-size: 24px;
+  padding: 3px 0;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-/* Filter container styles */
 .filter-container {
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -33,7 +30,6 @@ body {
   width: 200px;
 }
 
-/* Post and comment container styles */
 .post-comments-container {
   display: flex;
   justify-content: space-between;
@@ -45,15 +41,14 @@ body {
   border-radius: 10px;
 }
 
-/* Left side (Post list) styles */
 .left-side {
   flex: 1;
   padding: 0 10px;
   overflow-y: auto;
   max-height: 600px;
+  cursor:pointer;
 }
 
-/* Post styles */
 .post {
   cursor: pointer;
   border: 1px solid #ddd;
@@ -74,7 +69,6 @@ body {
   color: #fff;
 }
 
-/* Right side (Comment list) styles */
 .right-side {
   flex: 1;
   padding: 0 10px;
@@ -82,13 +76,11 @@ body {
   max-height: 600px;
 }
 
-/* Comment list styles */
 .comment-list {
   padding: 0;
   margin: 0;
 }
 
-/* Comment styles */
 .comment-list ul {
   list-style: none;
   padding: 0;
@@ -107,18 +99,28 @@ body {
   background-color: #e6e6e6;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
-  .post-comments-container {
-    flex-direction: column;
-    align-items: center;
+  
+
+ 
+  .App-header {
+    text-align: center;
   }
 
-  .left-side,
-  .right-side {
-    flex: unset;
-    max-width: 100%;
-    overflow-y: auto;
-    max-height: unset;
+  #postIdFilter {
+    width: 100%;
+  }
+
+  .comment-list li {
+    margin: 10px 0;
+  }
+
+  .back-to-home {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .left-side.hide-posts {
+    display: none;
   }
 }

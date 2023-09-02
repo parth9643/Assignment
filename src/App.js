@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css'; // Import a CSS file for styling
+import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -12,7 +12,7 @@ function App() {
     // Post ko fetch karne kai liye
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=1000');
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=100');
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -63,7 +63,7 @@ function App() {
 
       <div className="post-comments-container">
         <div className="left-side">
-          {/* Render Posts */}
+          {/*  Posts */}
           {filteredPosts.map((post) => (
             <div
               key={post.id}
