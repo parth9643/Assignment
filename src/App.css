@@ -1,0 +1,124 @@
+/* App.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Header styles */
+.App-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+}
+
+/* Filter container styles */
+.filter-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Dropdown styles */
+#postIdFilter {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+}
+
+/* Post and comment container styles */
+.post-comments-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Left side (Post list) styles */
+.left-side {
+  flex: 1;
+  padding: 0 10px;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+/* Post styles */
+.post {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.post:hover {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+.post.selected {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+/* Right side (Comment list) styles */
+.right-side {
+  flex: 1;
+  padding: 0 10px;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+/* Comment list styles */
+.comment-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* Comment styles */
+.comment-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.comment-list li:hover {
+  background-color: #e6e6e6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .post-comments-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side,
+  .right-side {
+    flex: unset;
+    max-width: 100%;
+    overflow-y: auto;
+    max-height: unset;
+  }
+}
